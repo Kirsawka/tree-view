@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Kirsawka/tree-view/static/css/main.15134fc3.css",
+    "main.js": "/Kirsawka/tree-view/static/js/main.8e9ba4ce.js",
+    "index.html": "/Kirsawka/tree-view/index.html",
+    "main.15134fc3.css.map": "/Kirsawka/tree-view/static/css/main.15134fc3.css.map",
+    "main.8e9ba4ce.js.map": "/Kirsawka/tree-view/static/js/main.8e9ba4ce.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15134fc3.css",
+    "static/js/main.8e9ba4ce.js"
+  ]
+}
