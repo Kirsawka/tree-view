@@ -1,10 +1,28 @@
-import {useState} from 'react';
-import {TreeNode, TreeViewProps} from "../types";
+import {useEffect, useState} from 'react';
+import {TreeNode} from "../types";
 import Node from './Node';
 
-function TreeView({tree}: TreeViewProps) {
-  const [data, setData] = useState(tree);
+const API_URL = 'data.json';
+
+function TreeView() {
+  const [data, setData] = useState<TreeNode[]>([]);
   const [nodeName, setNodeName] = useState('');
+
+  useEffect(() => {
+    fetch(API_URL,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        }
+      }
+    )
+      .then(promise => promise.json())
+      .then(data => {
+        setData(data);
+      })
+      .catch((err) => console.log(err.message))
+  }, []);
 
   const findNode = (data: any, name: string): TreeNode | undefined => {
     for (let i = 0; i < data.length; i++) {

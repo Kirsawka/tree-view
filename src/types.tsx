@@ -7,10 +7,6 @@ export type TreeNode = {
 
 export type Tree = TreeNode[];
 
-export type TreeViewProps = {
-  tree: TreeNode[];
-}
-
 export type NodeProps = {
   node: TreeNode;
   addNode: (nodeName: string) => void;
